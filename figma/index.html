@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Example</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="container">
+      <div class="header">
+         <h1>A Hero Headline</h1>
+         <button>Click me</button>
+         <button>Click me</button>
+      </div>
+      <div class="b1">B1</div>
+      <div class="b-group">
+        <div class="b2">B2</div>
+        <div class="b3">B3</div>
+        <div class="b4">B4</div>
+      </div>
+      <div class="c">C</div>
+      <div class="d">D</div>
+    </div>
+
+    <script>
+        // Função para adicionar um efeito hover de escala
+        const boxes = document.querySelectorAll('.b1, .b2, .b3, .b4, .c, .d');
+        
+        // Adiciona o evento de hover
+        boxes.forEach(box => {
+            box.addEventListener('mouseover', () => {
+                box.style.transform = 'scale(1.05)'; // Aumenta o tamanho do box
+                box.style.transition = 'transform 0.3s ease'; // Transição suave
+            });
+            
+            box.addEventListener('mouseout', () => {
+                box.style.transform = 'scale(1)'; // Volta ao tamanho original
+            });
+        });
+    </script>
+</body>
+</html>
